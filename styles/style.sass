@@ -1,0 +1,114 @@
+$base-text-color: #252422
+$base-background-color: #FFFCF2
+$base-link-color: #EB5E28
+
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+
+  background-color: $base-background-color
+  font-family: "Roboto", sans-serif
+  color: $base-text-color
+  font-size: 16px
+  line-height: 20px
+  font-weight: 400
+
+.container
+  padding: 0 10px
+  margin: 0 auto
+  max-width: 960px
+  width: 100%
+
+.task-form
+  margin: 0 0 30px 0
+  width: 100%
+  display: flex
+  &__input
+    padding: 2px 10px
+    width: calc(100% - 50px)
+    height: 38px
+    border: 1px solid $base-link-color
+    border-radius: 15px
+    outline: none
+
+  &__button
+    margin: 0 0 0 50px
+    width: 150px
+    height: 40px
+
+    color: $base-background-color
+    background-color: $base-link-color
+    border-radius: 15px
+
+    border: none
+    outline: none
+    cursor: pointer
+
+.navigation
+  margin: 0 0 30px 0
+  width: 100%
+  &__list
+    margin: 0
+    padding: 0
+    width: 100%
+    gap: 30px
+    display: flex
+    list-style: none
+  &__item
+    cursor: pointer
+    &_active
+      font-weight: 600
+      text-decoration: underline
+
+.task-list
+  margin: 0
+  padding: 0
+  &__item
+    display: flex
+
+.item
+  margin: 0 0 30px 0
+  justify-content: space-between
+  align-items: center
+  &__name
+    margin: 0 auto 0 0
+    font-size: 24px
+    line-height: 24px
+    font-weight: 600
+  &__done
+    margin: 0 15px 0 0
+    width: 28px
+    height: 28px
+
+    border-radius: 50%
+    background-color: transparent
+    border: 2px solid $base-link-color
+    outline: none
+    cursor: pointer
+    &:hover
+      box-shadow: 0 0 20px #EB5E2870
+    &_complete
+      background-color: $base-link-color
+      background-image: url('../img/done.svg')
+      background-repeat: no-repeat
+      background-position: center
+      background-size: 22px
+  &__remove
+    width: 30px
+    height: 30px
+
+    border-radius: 50%
+    background-color: #ba181b
+    border: none
+    outline: none
+    background-image: url('../img/trash.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 22px
+
+    cursor: pointer
+    &:hover
+      box-shadow: 0 0 20px #ba181b70
